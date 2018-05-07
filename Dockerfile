@@ -1,7 +1,6 @@
 FROM tomcat:7.0.85-jre7-alpine
 
 WORKDIR /usr/local/tomcat
-COPY .keystore /usr/local/tomcat/
 COPY web.xml /usr/local/tomcat/webapps/manager/WEB-INF/
 COPY startup.sh /usr/local/tomcat/bin/
 COPY catalina.sh /usr/local/tomcat/bin/
