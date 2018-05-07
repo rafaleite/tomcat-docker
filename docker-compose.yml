@@ -1,0 +1,12 @@
+mytomcat:
+  image: wex/tomcat
+  ports:
+    - "8080:8080"
+    - "443:8443"
+    - "8000:8000"
+  volumes:
+    - /Users/rafael/ambiente/wex/docker/tomcat/ssl.crt:/usr/local/tomcat/conf/ssl.crt
+    - /Users/rafael/ambiente/wex/docker/tomcat/ssl.key:/usr/local/tomcat/conf/ssl.key
+    - /Users/rafael/ambiente/wex/docker/tomcat/server.xml:/usr/local/tomcat/conf/server.xml
+    - /Users/rafael/volumes/tomcat/arquivos/:/root/arquivos/
+    - /Users/rafael/volumes/tomcat/logs/:/usr/local/tomcat/logs/
